@@ -52,6 +52,15 @@
     <string name="market">Market</string>
     <string name="events">Events</string>
     <string name="diseases">Diseases</string>
+    <string name="edit_garden_tips">Edit Garden Tips</string>
+    <string name="update">Update</string>
+    <string name="red_rose">Red Rose</string>
+    <string name="add_plant_diseases">Add Plant Diseases</string>
+    <string name="disease_name">Disease Name</string>
+    <string name="disease_description">Disease Description</string>
+    <string name="how_to_prevent_disease">How To Prevent Disease</string>
+    <string name="add_plant_disease_details">Add Plant Disease Details</string>
+    <string name="update_plant_disease_details">Update Plant Disease Details</string>
     <string name="edit_your_event">Edit Your Event</string>
     <string name="update">Update</string>
 </resources>
