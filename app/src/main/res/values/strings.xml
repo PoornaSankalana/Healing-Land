@@ -20,7 +20,6 @@
     <string name="start_planting">Start Planting</string>
     <string name="we_help_you_grow_and_care_your_plant_ease">We help you grow and care your plant ease</string>
     <string name="event_name">Event Name</string>
-    <string name="submit">Submit</string>
     <string name="add_up_your_event_to_the_feed">Add Up Your Event To The Feed</string>
     <string name="event_Name">Event Name</string>
     <string name="event_description">Event Description</string>
@@ -53,4 +52,13 @@
     <string name="market">Market</string>
     <string name="events">Events</string>
     <string name="diseases">Diseases</string>
+    <string name="edit_garden_tips">Edit Garden Tips</string>
+    <string name="update">Update</string>
+    <string name="red_rose">Red Rose</string>
+    <string name="add_plant_diseases">Add Plant Diseases</string>
+    <string name="disease_name">Disease Name</string>
+    <string name="disease_description">Disease Description</string>
+    <string name="how_to_prevent_disease">How To Prevent Disease</string>
+    <string name="add_plant_disease_details">Add Plant Disease Details</string>
+    <string name="update_plant_disease_details">Update Plant Disease Details</string>
 </resources>
