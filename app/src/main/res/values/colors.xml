@@ -14,5 +14,6 @@
     <color name="divider">#bebebe</color>
     <color name="placeholder">#69776d</color>
     <color name="sub_heading">#69776d</color>
-    <color name="text_field">#C6C6C6</color>
+    <color name="text_field">#EAE9E9</color>
+    <color name="text_field2">#A1CCB2</color>
 </resources>
