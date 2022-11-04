@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.90999997">
+        app:layout_constraintVertical_bias="0.76">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -242,15 +242,15 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/signInButton"
+                android:id="@+id/submitbtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/round_button"
                 android:fontFamily="@font/poppins_family"
-                android:text="@string/login"
+                android:text="@string/submit"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
