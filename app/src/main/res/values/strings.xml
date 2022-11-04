@@ -19,6 +19,16 @@
     <string name="first">First,</string>
     <string name="start_planting">Start Planting</string>
     <string name="we_help_you_grow_and_care_your_plant_ease">We help you grow and care your plant ease</string>
+    <string name="get_your_tips">Get Your Tips</string>
+    <string name="add_garden_tips">Add Garden Tips</string>
+    <string name="fertilizing_tip">Fertilizing Tip</string>
+    <string name="planting_tip">Planting Tip</string>
+    <string name="water">Water</string>
+    <string name="plant_type">Plant Type</string>
+    <string name="botanical_name">Botanical Name</string>
+    <string name="plant_name">Plant Name</string>
+    <string name="upload_a_photo">Upload a Photo</string>
+    <string name="submit">Submit</string>
     <string name="home">Home</string>
     <string name="tips">Tips</string>
     <string name="shop">Shop</string>
