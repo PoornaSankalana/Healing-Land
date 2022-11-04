@@ -14,6 +14,9 @@
         android:theme="@style/Theme.HealingLand"
         tools:targetApi="31">
         <activity
+            android:name=".VisitEvent"
+            android:exported="true" />
+        <activity
             android:name=".EventUpdate"
             android:exported="true" />
         <activity
