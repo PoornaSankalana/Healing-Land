@@ -59,6 +59,12 @@
             android:name=".EventAdd"
             android:exported="true" />
         <activity
+            android:name=".EventUpdate"
+            android:exported="true" />
+        <activity
+            android:name=".EventAdd"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false">
             <meta-data
