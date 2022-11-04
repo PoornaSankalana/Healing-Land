@@ -7,11 +7,11 @@
     tools:context=".AddGardenTips">
 
     <TextView
-        android:id="@+id/addGardenTips"
+        android:id="@+id/editGardenTips"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:fontFamily="@font/poppins_family"
-        android:text="@string/add_garden_tips"
+        android:text="@string/edit_garden_tips"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="28sp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76">
+        app:layout_constraintVertical_bias="0.8">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -64,7 +64,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/plantName"
+                android:id="@+id/pName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
@@ -91,7 +91,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/botanicalName"
+                android:id="@+id/bName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
@@ -118,7 +118,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/plantType"
+                android:id="@+id/pType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
@@ -145,7 +145,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/water"
+                android:id="@+id/wtr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
@@ -172,7 +172,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/plantingTip"
+                android:id="@+id/plTip"
                 android:layout_width="match_parent"
                 android:layout_height="70sp"
                 android:fontFamily="@font/poppins_family"
@@ -199,7 +199,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fertilizer"
+                android:id="@+id/fert"
                 android:layout_width="match_parent"
                 android:layout_height="70sp"
                 android:fontFamily="@font/poppins_family"
@@ -226,7 +226,7 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/uploadAPhoto"
+                android:id="@+id/upPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
@@ -242,22 +242,23 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/submitbtn"
+                android:id="@+id/updateButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/round_button"
                 android:fontFamily="@font/poppins_family"
-                android:text="@string/submit"
+                android:text="@string/update"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
-
-
         </LinearLayout>
 
     </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
