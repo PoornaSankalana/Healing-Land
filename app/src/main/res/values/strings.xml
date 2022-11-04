@@ -55,4 +55,9 @@
     <string name="edit_your_event">Edit Your Event</string>
     <string name="update">Update</string>
     <string name="visit_page">Visit Page</string>
+    <string name="plant_distribution">Plant Distribution</string>
+    <string name="descriptionevent">descriptionEvent</string>
+    <string name="venuee">Venue :</string>
+    <string name="times">Time :</string>
+    <string name="dat">Date :</string>
 </resources>
