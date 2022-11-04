@@ -7,6 +7,7 @@
     tools:context=".VisitEvent">
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/login_image"
@@ -20,12 +21,16 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/visit"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-38dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/visit" />
 
     <TextView
         android:id="@+id/headingTextView"
@@ -49,10 +54,11 @@
         android:layout_height="85dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.871"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintVertical_bias="0.871">
 
         <Button
             android:id="@+id/visitbtn"
