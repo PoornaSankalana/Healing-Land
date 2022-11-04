@@ -57,10 +57,10 @@
             android:layout_marginEnd="30dp"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/poppins_family"
-            android:text="@string/you_have_to_create_an_account_in_our_app"
+            android:text="@string/we_help_you_grow_and_care_your_plant_ease"
             android:textAlignment="center"
             android:textColor="@color/sub_heading"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
         <Button
