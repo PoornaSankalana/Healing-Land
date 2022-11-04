@@ -9,4 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
 <!--    user defined colors-->
+    <color name="button">#2a554b</color>
+    <color name="heading">#2a554b</color>
+    <color name="divider">#bebebe</color>
+    <color name="placeholder">#69776d</color>
+    <color name="sub_heading">#69776d</color>
 </resources>
