@@ -17,8 +17,10 @@
             android:name=".EventView"
             android:exported="true" />
         <activity
-            android:name=".VisitEvent"
             android:name=".EditDiseases"
+            android:exported="true" />
+        <activity
+            android:name=".VisitEvent"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
@@ -64,9 +66,6 @@
             android:exported="true" />
         <activity
             android:name=".EventUpdate"
-            android:exported="true" />
-        <activity
-            android:name=".EventAdd"
             android:exported="true" />
         <activity
             android:name=".HomeActivity"
