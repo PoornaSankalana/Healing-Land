@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UEE/Healing-Land/app/src/main/res/drawable-v24/round_button.xml" value="0.1785" />
+        <entry key="..\:/UEE/Healing-Land/app/src/main/res/drawable/round_button.xml" value="0.1785" />
+        <entry key="..\:/UEE/Healing-Land/app/src/main/res/drawable/round_textfield.xml" value="0.1785" />
+        <entry key="..\:/UEE/Healing-Land/app/src/main/res/drawable/round_textfield2.xml" value="0.1785" />
         <entry key="..\:/UEE/Healing-Land/app/src/main/res/layout/activity_event_add.xml" value="0.22" />
         <entry key="..\:/UEE/Healing-Land/app/src/main/res/layout/activity_event_update.xml" value="0.20416666666666666" />
         <entry key="..\:/UEE/Healing-Land/app/src/main/res/layout/activity_event_view.xml" value="0.19947916666666668" />
