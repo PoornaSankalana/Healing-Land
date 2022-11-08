@@ -45,7 +45,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Fields.UserData.TABLE_NAME;
 
-    private long RegisterUser (String firstname, String lastname, String email, String imageUrl, String phone, String password){
+    public long RegisterUser (String firstname, String lastname, String email, String imageUrl, String phone, String password){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
