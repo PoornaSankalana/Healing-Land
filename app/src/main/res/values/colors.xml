@@ -14,6 +14,7 @@
     <color name="divider">#bebebe</color>
     <color name="placeholder">#69776d</color>
     <color name="sub_heading">#69776d</color>
+    <color name="error">#ff3333</color>
     <color name="text_field">#EAE9E9</color>
     <color name="green_background">#A1CCB2</color>
 </resources>
