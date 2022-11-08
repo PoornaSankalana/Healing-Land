@@ -37,7 +37,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/poppins_family"
             android:textAlignment="center"
-            android:textColor="@color/button"
+            android:textColor="@color/error"
             android:textSize="12sp" />
 
         <TextView
