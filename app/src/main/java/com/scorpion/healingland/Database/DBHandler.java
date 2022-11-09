@@ -24,28 +24,44 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
+        db.execSQL(SQL_CREATE_GARDEN_TIPS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DELETE_ENTRIES);
+        db.execSQL(SQL_DELETE_GARDEN_TIPS);
         onCreate(db);
     }
 
     // User table creation
-    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + Fields.UserData.TABLE_NAME + "(" +
-            Fields.UserData._ID + " INTEGER," +
-            Fields.UserData.COLUMN_1 + "TEXT," +
-            Fields.UserData.COLUMN_2 + "TEXT," +
-            Fields.UserData.COLUMN_3 + "TEXT PRIMARY KEY," +
-            Fields.UserData.COLUMN_4 + "INTEGER," +
-            Fields.UserData.COLUMN_5 + "TEXT)";
+    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + Fields.UserData.TABLE_NAME + " (" +
+            Fields.UserData.COLUMN_1 + " TEXT," +
+            Fields.UserData.COLUMN_2 + " TEXT," +
+            Fields.UserData.COLUMN_3 + " TEXT PRIMARY KEY," +
+            Fields.UserData.COLUMN_4 + " TEXT," +
+            Fields.UserData.COLUMN_5 + " TEXT)";
+
+    // GardenTips table creation
+    private static final String SQL_CREATE_GARDEN_TIPS = "CREATE TABLE " + Fields.GardenTipsData.TABLE_NAME + " (" +
+            Fields.GardenTipsData.COLUMN_1 + " TEXT PRIMARY KEY," +
+            Fields.GardenTipsData.COLUMN_2 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_3 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_4 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_5 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_6 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_7 + " TEXT," +
+            Fields.GardenTipsData.COLUMN_8 + " TEXT)";
 
     // Drop user table
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Fields.UserData.TABLE_NAME;
 
-    public long RegisterUser (String firstname, String lastname, String email, String imageUrl, String phone, String password){
+    // Drop GardenTips table
+    private static final String SQL_DELETE_GARDEN_TIPS =
+            "DROP TABLE IF EXISTS " + Fields.GardenTipsData.TABLE_NAME;
+
+    public long RegisterUser (String firstname, String lastname, String email, String phone, String password){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
@@ -97,15 +113,32 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         cursor.close();
 
-        // assertion
-        assert ValidUser != null;
-
        // return a boolean
         if(ValidUser.isEmpty()){
             return false;
         } else {
             return true;
         }
+    }
+
+    public long AddGardenTips (String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl){
+        // Get the database instance in write mode
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Fields.GardenTipsData.COLUMN_1, plantName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_2, botanicalName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_3, plantType);
+        contentValues.put(Fields.GardenTipsData.COLUMN_4, water);
+        contentValues.put(Fields.GardenTipsData.COLUMN_5, plantingTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_6, fertilizerTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_7, imageUrl);
+
+        // insert the new row and returning
+        long newRow = db.insert(Fields.GardenTipsData.TABLE_NAME, null, contentValues);
+
+        return newRow;
     }
 
     public long Event (String eventname, String eventdescription, String date, String time, String venue, String cname, String cnumber, String imgurl){
