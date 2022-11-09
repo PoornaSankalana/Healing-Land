@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">HealingLand</string>
     <string name="login">Login</string>
-    <string name="fill_your_username">Fill your Username and Password to Login</string>
+    <string name="fill_your_email">Fill your Email and Password to Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="forget_password">Forget Password</string>
     <string name="or_sign_in_with">OR Sign in With</string>
     <string name="sign_in_with_google">Sign in with Google</string>
-    <string name="i_don_t_have_an_account">I Don\'t Have an Account ?</string>
+    <string name="i_don_t_have_an_account">I don\'t have an account </string>
     <string name="register">Register</string>
     <string name="login_image">Login Image</string>
     <string name="healing_land">Healing Land</string>
@@ -68,6 +68,14 @@
     <string name="venuee">Venue :</string>
     <string name="times">Time :</string>
     <string name="dat">Date :</string>
+    <string name="email">Email</string>
+    <string name="fill_your_details_to_register">Fill your details to Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="telephone">Telephone</string>
+    <string name="address">Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_already_have_an_account">I already have an account</string>
     <string name="plantation_events">Plantation Events</string>
     <string name="add_events">Add Events</string>
 </resources>
