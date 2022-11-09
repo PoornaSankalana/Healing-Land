@@ -68,4 +68,6 @@
     <string name="venuee">Venue :</string>
     <string name="times">Time :</string>
     <string name="dat">Date :</string>
+    <string name="plantation_events">Plantation Events</string>
+    <string name="add_events">Add Events</string>
 </resources>
