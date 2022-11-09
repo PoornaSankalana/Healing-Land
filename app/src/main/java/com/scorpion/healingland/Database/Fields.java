@@ -21,12 +21,13 @@ public final class Fields {
 
     public static class GardenTipsData implements BaseColumns{
         public static final String TABLE_NAME = "GardenTipInfo";
-        public static final String COLUMN_1 = "PlantName";
-        public static final String COLUMN_2= "BotanicalName";
-        public static final String COLUMN_3 = "PlantType";
-        public static final String COLUMN_4 = "Water";
-        public static final String COLUMN_5 = "PlantingTip";
-        public static final String COLUMN_6 = "FertilizingTip";
-        public static final String COLUMN_7 = "ImageUrl";
+        public static final String COLUMN_1 = "plant_code";
+        public static final String COLUMN_2 = "plant_name";
+        public static final String COLUMN_3= "botanical_name";
+        public static final String COLUMN_4 = "plant_type";
+        public static final String COLUMN_5 = "water";
+        public static final String COLUMN_6 = "planting_tip";
+        public static final String COLUMN_7 = "fertilizing_tip";
+        public static final String COLUMN_8 = "image_url";
     }
 }
