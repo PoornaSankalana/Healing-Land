@@ -33,19 +33,19 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     // User table creation
-    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + Fields.UserData.TABLE_NAME + "(" +
-            Fields.UserData._ID + " INTEGER," +
-            Fields.UserData.COLUMN_1 + "TEXT," +
-            Fields.UserData.COLUMN_2 + "TEXT," +
-            Fields.UserData.COLUMN_3 + "TEXT PRIMARY KEY," +
-            Fields.UserData.COLUMN_4 + "INTEGER," +
-            Fields.UserData.COLUMN_5 + "TEXT)";
+    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE " + Fields.UserData.TABLE_NAME + " (" +
+//            Fields.UserData._ID + " INTEGER, " +
+            Fields.UserData.COLUMN_1 + " TEXT," +
+            Fields.UserData.COLUMN_2 + " TEXT," +
+            Fields.UserData.COLUMN_3 + " TEXT PRIMARY KEY," +
+            Fields.UserData.COLUMN_4 + " TEXT," +
+            Fields.UserData.COLUMN_5 + " TEXT)";
 
     // Drop user table
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Fields.UserData.TABLE_NAME;
 
-    public long RegisterUser (String firstname, String lastname, String email, String imageUrl, String phone, String password){
+    public long RegisterUser (String firstname, String lastname, String email, String phone, String password){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
@@ -96,9 +96,6 @@ public class DBHandler extends SQLiteOpenHelper {
             ValidUser = cursor.getString(cursor.getColumnIndexOrThrow(Fields.UserData.COLUMN_3));
         }
         cursor.close();
-
-        // assertion
-        assert ValidUser != null;
 
        // return a boolean
         if(ValidUser.isEmpty()){

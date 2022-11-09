@@ -12,10 +12,10 @@ public final class Fields {
     */
     public static class UserData implements BaseColumns{
         public static final String TABLE_NAME = "UserInfo";
-        public static final String COLUMN_1 = "FirstName";
-        public static final String COLUMN_2= "LastName";
-        public static final String COLUMN_3 = "Email";
-        public static final String COLUMN_4 = "Phone";
-        public static final String COLUMN_5 = "Password";
+        public static final String COLUMN_1 = "firstname";
+        public static final String COLUMN_2 = "lastname";
+        public static final String COLUMN_3 = "email";
+        public static final String COLUMN_4 = "phone";
+        public static final String COLUMN_5 = "password";
     }
 }

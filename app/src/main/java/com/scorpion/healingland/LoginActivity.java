@@ -20,6 +20,8 @@ public class LoginActivity extends AppCompatActivity {
     Button login;
     TextInputEditText username, password;
     TextView errorMsg;
+    boolean status = false;
+    String send;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,35 +33,48 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         login = findViewById(R.id.signInButton);
 
+        send = username.getText().toString();
+
         login.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 DBHandler dbHandler = new DBHandler(getApplicationContext());
 
-                if((username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())){
+                if ((username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())) {
                     errorMsg.setText("* Fill Username and Password");
-                } else if((username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())){
+                } else if ((username.getText().toString().isEmpty()) && !(password.getText().toString().isEmpty())) {
                     errorMsg.setText("* Fill Username");
-                } else if(!(username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())){
+                } else if (!(username.getText().toString().isEmpty()) && (password.getText().toString().isEmpty())) {
                     errorMsg.setText("* Fill Password");
                 } else {
                     try {
+                        status = dbHandler.userLogin(username.getText().toString(), password.getText().toString());
 
-
-                        if (dbHandler.userLogin(username.getText().toString(), password.getText().toString())) {
-                            Toast.makeText(LoginActivity.this, "User Login Successfully!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                            startActivity(i);
-                            finish();
-                        } else {
-                            errorMsg.setText("* Username or Password Incorrect");
-                        }
-                    } catch (Exception e){
-                        errorMsg.setText("* Something Went Wrong!");
+                    } catch (Exception e) {
+                        // something Went Wrong
+                        errorMsg.setText("* Something went wrong!");
                     }
+
+                    // checking the login status
+                    if (status) {
+                        Toast.makeText(LoginActivity.this, "User Login Successfully!", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                        i.putExtra("email", send);
+                        startActivity(i);
+                        finish();
+                    } else {
+                        errorMsg.setText("* Username or Password Incorrect");
+                    }
+
                 }
             }
         });
+    }
+
+    public void navigateRegister(View view) {
+        Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+        startActivity(i);
+        finish();
     }
 }
