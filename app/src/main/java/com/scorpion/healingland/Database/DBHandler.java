@@ -140,4 +140,26 @@ public class DBHandler extends SQLiteOpenHelper {
 
         return newRow;
     }
+
+    public long Event (String eventname, String eventdescription, String date, String time, String venue, String cname, String cnumber, String imgurl){
+        // Get the database instance in write mode
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Fields.EventData.COLUMN_1, eventname);
+        contentValues.put(Fields.EventData.COLUMN_2, eventdescription);
+        contentValues.put(Fields.EventData.COLUMN_3, date);
+        contentValues.put(Fields.EventData.COLUMN_4, time);
+        contentValues.put(Fields.EventData.COLUMN_5, venue);
+        contentValues.put(Fields.EventData.COLUMN_6, cname);
+        contentValues.put(Fields.EventData.COLUMN_7, cnumber);
+        contentValues.put(Fields.EventData.COLUMN_8, imgurl);
+
+        // insert the new row and returning
+        long newRow = db.insert(Fields.UserData.TABLE_NAME, null, contentValues);
+
+        return newRow;
+    }
+
 }
