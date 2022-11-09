@@ -12,11 +12,23 @@ public final class Fields {
     */
     public static class UserData implements BaseColumns{
         public static final String TABLE_NAME = "UserInfo";
-        public static final String COLUMN_1 = "FirstName";
-        public static final String COLUMN_2= "LastName";
-        public static final String COLUMN_3 = "Email";
-        public static final String COLUMN_4 = "Phone";
-        public static final String COLUMN_5 = "Password";
+        public static final String COLUMN_1 = "firstname";
+        public static final String COLUMN_2 = "lastname";
+        public static final String COLUMN_3 = "email";
+        public static final String COLUMN_4 = "phone";
+        public static final String COLUMN_5 = "password";
+    }
+
+    public static class GardenTipsData implements BaseColumns{
+        public static final String TABLE_NAME = "GardenTipInfo";
+        public static final String COLUMN_1 = "plant_code";
+        public static final String COLUMN_2 = "plant_name";
+        public static final String COLUMN_3= "botanical_name";
+        public static final String COLUMN_4 = "plant_type";
+        public static final String COLUMN_5 = "water";
+        public static final String COLUMN_6 = "planting_tip";
+        public static final String COLUMN_7 = "fertilizing_tip";
+        public static final String COLUMN_8 = "image_url";
     }
 
     public static class EventData implements BaseColumns{
