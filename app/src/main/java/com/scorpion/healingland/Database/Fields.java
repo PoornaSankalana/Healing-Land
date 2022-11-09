@@ -18,4 +18,15 @@ public final class Fields {
         public static final String COLUMN_4 = "Phone";
         public static final String COLUMN_5 = "Password";
     }
+
+    public static class GardenTipsData implements BaseColumns{
+        public static final String TABLE_NAME = "GardenTipInfo";
+        public static final String COLUMN_1 = "PlantName";
+        public static final String COLUMN_2= "BotanicalName";
+        public static final String COLUMN_3 = "PlantType";
+        public static final String COLUMN_4 = "Water";
+        public static final String COLUMN_5 = "PlantingTip";
+        public static final String COLUMN_6 = "FertilizingTip";
+        public static final String COLUMN_7 = "ImageUrl";
+    }
 }
