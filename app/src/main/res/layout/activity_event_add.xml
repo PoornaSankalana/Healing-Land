@@ -48,6 +48,18 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
 
+        <TextView
+            android:id="@+id/erMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_family"
+            android:textAlignment="center"
+            android:textColor="@color/error"
+            android:textSize="12sp" />
+
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
