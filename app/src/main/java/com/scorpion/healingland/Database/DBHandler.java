@@ -25,12 +25,14 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL(SQL_CREATE_GARDEN_TIPS);
+        db.execSQL(SQL_CREATE_EVENT);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DELETE_ENTRIES);
         db.execSQL(SQL_DELETE_GARDEN_TIPS);
+        db.execSQL(SQL_DELETE_EVENT);
         onCreate(db);
     }
 
@@ -53,6 +55,18 @@ public class DBHandler extends SQLiteOpenHelper {
             Fields.GardenTipsData.COLUMN_7 + " TEXT," +
             Fields.GardenTipsData.COLUMN_8 + " TEXT)";
 
+    // Event table creation
+    private static final String SQL_CREATE_EVENT = "CREATE TABLE " + Fields.EventData.TABLE_NAME + " (" +
+            Fields.EventData.COLUMN_1 + " TEXT PRIMARY KEY," +
+            Fields.EventData.COLUMN_2 + " TEXT," +
+            Fields.EventData.COLUMN_3 + " TEXT," +
+            Fields.EventData.COLUMN_4 + " TEXT," +
+            Fields.EventData.COLUMN_5 + " TEXT," +
+            Fields.EventData.COLUMN_6 + " TEXT," +
+            Fields.EventData.COLUMN_7 + " TEXT," +
+            Fields.EventData.COLUMN_8 + " TEXT," +
+            Fields.EventData.COLUMN_9 + " TEXT)";
+
     // Drop user table
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Fields.UserData.TABLE_NAME;
@@ -60,6 +74,10 @@ public class DBHandler extends SQLiteOpenHelper {
     // Drop GardenTips table
     private static final String SQL_DELETE_GARDEN_TIPS =
             "DROP TABLE IF EXISTS " + Fields.GardenTipsData.TABLE_NAME;
+
+    // Drop Event table
+    private static final String SQL_DELETE_EVENT =
+            "DROP TABLE IF EXISTS " + Fields.EventData.TABLE_NAME;
 
     public long RegisterUser (String firstname, String lastname, String email, String phone, String password){
         // Get the database instance in write mode
@@ -81,7 +99,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     public boolean userLogin (String email, String password) {
         // Get the database instance in read mode
-        SQLiteDatabase db = getWritableDatabase();
+        SQLiteDatabase db = getReadableDatabase();
 
         String[] projection = {
 //                BaseColumns._ID,
@@ -121,19 +139,20 @@ public class DBHandler extends SQLiteOpenHelper {
         }
     }
 
-    public long AddGardenTips (String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl){
+    public long AddGardenTips (String plantCode, String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Fields.GardenTipsData.COLUMN_1, plantName);
-        contentValues.put(Fields.GardenTipsData.COLUMN_2, botanicalName);
-        contentValues.put(Fields.GardenTipsData.COLUMN_3, plantType);
-        contentValues.put(Fields.GardenTipsData.COLUMN_4, water);
-        contentValues.put(Fields.GardenTipsData.COLUMN_5, plantingTip);
-        contentValues.put(Fields.GardenTipsData.COLUMN_6, fertilizerTip);
-        contentValues.put(Fields.GardenTipsData.COLUMN_7, imageUrl);
+        contentValues.put(Fields.GardenTipsData.COLUMN_1, plantCode);
+        contentValues.put(Fields.GardenTipsData.COLUMN_2, plantName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_3, botanicalName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_4, plantType);
+        contentValues.put(Fields.GardenTipsData.COLUMN_5, water);
+        contentValues.put(Fields.GardenTipsData.COLUMN_6, plantingTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_7, fertilizerTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_8, imageUrl);
 
         // insert the new row and returning
         long newRow = db.insert(Fields.GardenTipsData.TABLE_NAME, null, contentValues);
@@ -141,20 +160,21 @@ public class DBHandler extends SQLiteOpenHelper {
         return newRow;
     }
 
-    public long Event (String eventname, String eventdescription, String date, String time, String venue, String cname, String cnumber, String imgurl){
+    public long AddEvent (String eventId, String eventName, String eventDescription, String date, String time, String venue, String cname, String cNumber, String imgUrl){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Fields.EventData.COLUMN_1, eventname);
-        contentValues.put(Fields.EventData.COLUMN_2, eventdescription);
-        contentValues.put(Fields.EventData.COLUMN_3, date);
-        contentValues.put(Fields.EventData.COLUMN_4, time);
-        contentValues.put(Fields.EventData.COLUMN_5, venue);
-        contentValues.put(Fields.EventData.COLUMN_6, cname);
-        contentValues.put(Fields.EventData.COLUMN_7, cnumber);
-        contentValues.put(Fields.EventData.COLUMN_8, imgurl);
+        contentValues.put(Fields.EventData.COLUMN_1, eventId);
+        contentValues.put(Fields.EventData.COLUMN_2, eventName);
+        contentValues.put(Fields.EventData.COLUMN_3, eventDescription);
+        contentValues.put(Fields.EventData.COLUMN_4, date);
+        contentValues.put(Fields.EventData.COLUMN_5, time);
+        contentValues.put(Fields.EventData.COLUMN_6, venue);
+        contentValues.put(Fields.EventData.COLUMN_7, cname);
+        contentValues.put(Fields.EventData.COLUMN_8, cNumber);
+        contentValues.put(Fields.EventData.COLUMN_9, imgUrl);
 
         // insert the new row and returning
         long newRow = db.insert(Fields.UserData.TABLE_NAME, null, contentValues);

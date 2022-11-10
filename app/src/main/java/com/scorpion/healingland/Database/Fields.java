@@ -41,5 +41,7 @@ public final class Fields {
         public static final String COLUMN_6 = "cname";
         public static final String COLUMN_7 = "cnumber";
         public static final String COLUMN_8 = "imgurl";
+
+      
     }
 }
