@@ -18,7 +18,7 @@ import com.scorpion.healingland.Database.DBHandler;
 public class EventAdd extends AppCompatActivity {
 
     TextView errorMsg;
-    TextInputEditText eventname, eventdescription, date, time, venue, cname, cnumber, imgurl;
+    TextInputEditText eventId, eventname, eventdescription, date, time, venue, cname, cnumber, imgurl;
     Button submit;
 
     @Override
@@ -27,6 +27,7 @@ public class EventAdd extends AppCompatActivity {
         setContentView(R.layout.activity_event_add);
 
         errorMsg = findViewById(R.id.erMsg);
+        eventId = findViewById(R.id.eventId);
         eventname = findViewById(R.id.eventName);
         eventdescription = findViewById(R.id.eventDescription);
         date = findViewById(R.id.date);
@@ -41,12 +42,12 @@ public class EventAdd extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                if (eventname.getText().toString().isEmpty() || eventdescription.getText().toString().isEmpty() || date.getText().toString().isEmpty() || time.getText().toString().isEmpty() || venue.getText().toString().isEmpty() || cname.getText().toString().isEmpty() || cnumber.getText().toString().isEmpty() || imgurl.getText().toString().isEmpty()) {
+                if (eventId.getText().toString().isEmpty() || eventname.getText().toString().isEmpty() || eventdescription.getText().toString().isEmpty() || date.getText().toString().isEmpty() || time.getText().toString().isEmpty() || venue.getText().toString().isEmpty() || cname.getText().toString().isEmpty() || cnumber.getText().toString().isEmpty() || imgurl.getText().toString().isEmpty()) {
                     errorMsg.setText("* All the fields are required");
                 } else {
 
                     DBHandler dbHandler = new DBHandler(getApplicationContext());
-                    long newID = dbHandler.Event(eventname.getText().toString(), eventdescription.getText().toString(), date.getText().toString(), time.getText().toString(), venue.getText().toString(), cname.getText().toString(), cnumber.getText().toString(), imgurl.getText().toString());
+                    long newID = dbHandler.AddEvent(eventId.getText().toString(), eventname.getText().toString(), eventdescription.getText().toString(), date.getText().toString(), time.getText().toString(), venue.getText().toString(), cname.getText().toString(), cnumber.getText().toString(), imgurl.getText().toString());
 
                     System.out.println(newID);
 
@@ -57,7 +58,7 @@ public class EventAdd extends AppCompatActivity {
                         // checking the login status
 
                     } else {
-                        errorMsg.setText("* Event added faild.");
+                        errorMsg.setText("* Event added failed.");
                     }
 
                 }

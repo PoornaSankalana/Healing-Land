@@ -177,7 +177,7 @@ public class DBHandler extends SQLiteOpenHelper {
         contentValues.put(Fields.EventData.COLUMN_9, imgUrl);
 
         // insert the new row and returning
-        long newRow = db.insert(Fields.UserData.TABLE_NAME, null, contentValues);
+        long newRow = db.insert(Fields.EventData.TABLE_NAME, null, contentValues);
 
         return newRow;
     }
