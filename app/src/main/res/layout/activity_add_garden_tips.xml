@@ -6,23 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".AddGardenTips">
 
-    <TextView
-        android:id="@+id/addGardenTips"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:fontFamily="@font/poppins_family"
-        android:text="@string/add_garden_tips"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+<!--    <TextView-->
+<!--        android:id="@+id/addGardenTips"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:fontFamily="@font/poppins_family"-->
+<!--        android:text="@string/add_garden_tips"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="28sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageView3"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.050000012" />-->
 
     <ImageView
         android:id="@+id/imageView3"
@@ -36,15 +36,77 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background_decoration" />
 
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="423dp"-->
+<!--        android:layout_height="650dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="vertical"-->
+<!--        >-->
+
+
     <LinearLayout
-        android:layout_width="423dp"
-        android:layout_height="650dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76">
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:id="@+id/addGardenTips"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/add_garden_tips"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+             />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_family"
+            android:textAlignment="center"
+            android:textColor="@color/error"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:padding="4dp"
+            android:textColorHint="@color/placeholder"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxStrokeColor="@color/placeholder"
+            app:hintTextColor="@color/placeholder"
+            app:startIconTint="@color/placeholder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/plantCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_family"
+                android:hint="@string/plant_code"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -242,7 +304,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/submitbtn"
+                android:id="@+id/addTipsBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
