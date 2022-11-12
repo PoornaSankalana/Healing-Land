@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiseasesHome">
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/plant_diseases_home"
+        android:foregroundGravity="left"
+        android:src="@drawable/background_decoration"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-2dp" />
+
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/get_your_tips"
+            android:textAlignment="center"
+            android:textColor="@color/heading"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:background="@drawable/round_ashback"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rose"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/rose_pot"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="@string/care" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:paddingHorizontal="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/esay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:text="@string/water" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/every_4_7_days" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:text="@string/sun" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/part" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        Next-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/round_ashback"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/hardy_gerbra"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/hardy"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:text="@string/care" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/esay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:text="@string/water" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/every_4_7_days" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:text="@string/sun" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="20dp"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/part" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        Next-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:background="@drawable/round_ashback"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/petunia_pink"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/petunia"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="@string/care" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:paddingHorizontal="20dp"
+                            android:textAlignment="gravity"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/esay" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="@string/water" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="20dp"
+                            android:paddingHorizontal="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/every_4_7_days" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/round_whiteback"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="20dp"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:text="@string/sun" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:paddingVertical="2dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="20dp"
+                            android:paddingHorizontal="20dp"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textAlignment="gravity"
+                            android:textColor="@color/button"
+                            android:background="@drawable/round_greenback"
+                            android:text="@string/part" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</ScrollView>

@@ -6,10 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
     Button startPlanting;
+
+    // back button
+    private static final int TIME_INTERVAL = 2000;
+    private long backPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +31,16 @@ public class FirstActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backPressed + TIME_INTERVAL > System.currentTimeMillis()){
+            super.onBackPressed();
+            return;
+        } else {
+            Toast.makeText(FirstActivity.this, "Press Back Again to Exit!", Toast.LENGTH_SHORT).show();
+        }
+        backPressed = System.currentTimeMillis();
     }
 }
