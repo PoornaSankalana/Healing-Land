@@ -109,4 +109,5 @@
     <string name="rose">Rose</string>
     <string name="hardy_gerbra">Hardy Gerbera</string>
     <string name="petunia_pink">Petunia Pink</string>
+    <string name="event_id">Event ID</string>
 </resources>
