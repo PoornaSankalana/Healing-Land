@@ -99,10 +99,10 @@
                         android:text="@string/care" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:paddingHorizontal="20dp"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -165,10 +165,10 @@
                             android:text="@string/sun" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:layout_marginEnd="20dp"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -245,10 +245,10 @@
                             android:text="@string/care" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:paddingHorizontal="20dp"
                             android:textAlignment="gravity"
                             android:textSize="12sp"
@@ -311,10 +311,10 @@
                             android:text="@string/sun" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:layout_marginEnd="20dp"
                             android:paddingHorizontal="20dp"
                             android:textAlignment="gravity"
@@ -391,10 +391,10 @@
                             android:text="@string/care" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:paddingHorizontal="20dp"
                             android:textAlignment="gravity"
                             android:textSize="12sp"
@@ -457,10 +457,10 @@
                             android:text="@string/sun" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="80dp"
                             android:layout_height="match_parent"
                             android:paddingVertical="2dp"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="22dp"
                             android:layout_marginEnd="20dp"
                             android:paddingHorizontal="20dp"
                             android:textSize="12sp"
