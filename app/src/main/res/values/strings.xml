@@ -111,4 +111,10 @@
     <string name="hardy_gerbra">Hardy Gerbera</string>
     <string name="petunia_pink">Petunia Pink</string>
     <string name="event_id">Event ID</string>
+    <string name="add_new_disease">Add New Disease</string>
+    <string name="disease_cause">Disease Cause</string>
+    <string name="delete">Delete</string>
+    <string name="bacterial_spot_can_be_a_devastating_disease_when_the_weather_is_warm_and_humid_the_disease_can_affect_all_above_ground_parts_of_tomato_and">Bacterial spot can be a devastating disease when the weather is warm and humid. The disease can affect all above-ground parts of tomato and</string>
+    <string name="use_clean_propagation_material_and_disease_free_seed_in_field_grown_tomato_and_pepper_rotate">Use clean propagation material and disease-free seed. In field-grown tomato and pepper rotate</string>
+    <string name="four_species_of_xanthomonas">four species of Xanthomonas</string>
 </resources>
