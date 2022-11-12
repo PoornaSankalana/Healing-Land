@@ -1,22 +1,27 @@
 package com.scorpion.healingland;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.view.MenuItem;
-
-import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.shape.CornerFamily;
-import com.google.android.material.shape.MaterialShapeDrawable;
 
 public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavViewer;
+
+
+    String thisFragment;
+
+    // back button
+    private static final int TIME_INTERVAL = 2000;
+    private long backPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new HomeFragment(), "HomeFragment").commit();
+        fragmentTransaction.add(R.id.fragment_container, new HomeFragment(), "HomeFragment").commit();
 
         // making the bottom navigation bar background null
         bottomNavViewer = findViewById(R.id.bottomNavView);
@@ -35,24 +40,26 @@ public class HomeActivity extends AppCompatActivity {
 
     private final BottomNavigationView.OnNavigationItemSelectedListener Lister = new BottomNavigationView.OnNavigationItemSelectedListener() {
         String Fragment;
+
         @SuppressLint("SetTextI18n")
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
-            switch (item.getItemId()){
+            switch (item.getItemId()) {
                 case R.id.home:
 //                    header.setText("Welcome...");
 //                    username.setText("Hello " + UserName);
                     selectedFragment = new HomeFragment();
                     Fragment = "HomeFragment";
+                    thisFragment = Fragment;
                     break;
 
-//                case R.id.offer:
+                case R.id.tips:
 //                    header.setText("Offers");
 //                    username.setText("Here is our offers");
-//                    selectedFragment = new OffersFragment();
-//                    Fragment = "offerFragment";
-//                    break;
+                    selectedFragment = new TipsList();
+                    Fragment = "offerFragment";
+                    break;
 //
 //                case R.id.menu:
 //                    header.setText("Menu");
@@ -75,6 +82,17 @@ public class HomeActivity extends AppCompatActivity {
             return true;
         }
     };
+
+//    @Override
+//    public void onBackPressed() {
+//        if (backPressed + TIME_INTERVAL > System.currentTimeMillis() && thisFragment.equals("HomeFragment")) {
+//            super.onBackPressed();
+//            return;
+//        } else {
+//            Toast.makeText(HomeActivity.this, "Press Back Again to Exit!", Toast.LENGTH_SHORT).show();
+//        }
+//        backPressed = System.currentTimeMillis();
+//    }
 
 };
 

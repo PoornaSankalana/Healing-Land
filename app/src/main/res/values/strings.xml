@@ -93,4 +93,21 @@
     <string name="i_already_have_an_account">I already have an account</string>
     <string name="plantation_events">Plantation Events</string>
     <string name="add_events">Add Events</string>
+    <string name="cure_and_prevent_plant_diseases">Cure and Prevent Plant Diseases</string>
+    <string name="plant_diseases_home">Plant Diseases Home</string>
+    <string name="plant_diseases">Plant Diseases</string>
+    <string name="bacterial_spot">Bacterial Spot</string>
+    <string name="anthracnose">Anthracnose</string>
+    <string name="apple_scab">Apple Scab</string>
+    <string name="bacterial_spot_description">Bacterial spot can be a devastating disease when the weather is warm and humid. The disease can affect all above-ground p arts of tomato and pepper plants: stems, petioles, leaves, and fruits.</string>
+    <string name="bacterial_spot_prevent">Use clean propagation material and disease-free seed. In field-grown tomato and pepper rotate fields to prevent infection from volunteer plants and crop debris.</string>
+    <string name="care">Care</string>
+    <string name="esay">Esay</string>
+    <string name="every_4_7_days">Every 4 - 7 Days</string>
+    <string name="sun">Sun</string>
+    <string name="part">Part</string>
+    <string name="rose">Rose</string>
+    <string name="hardy_gerbra">Hardy Gerbera</string>
+    <string name="petunia_pink">Petunia Pink</string>
+    <string name="event_id">Event ID</string>
 </resources>
