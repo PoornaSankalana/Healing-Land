@@ -93,6 +93,7 @@
     <string name="i_already_have_an_account">I already have an account</string>
     <string name="plantation_events">Plantation Events</string>
     <string name="add_events">Add Events</string>
+    <string name="plant_code">plant_code</string>
     <string name="cure_and_prevent_plant_diseases">Cure and Prevent Plant Diseases</string>
     <string name="plant_diseases_home">Plant Diseases Home</string>
     <string name="plant_diseases">Plant Diseases</string>
