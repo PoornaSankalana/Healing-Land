@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class PlantDiseases extends Fragment {
     Button bacterialSpotView;
+    Button addNewDisease;
 
     @Nullable
     @Override
@@ -21,6 +22,7 @@ public class PlantDiseases extends Fragment {
         View view = inflater.inflate(R.layout.fragment_plant_diseases, container,false);
 
         bacterialSpotView = view.findViewById(R.id.bacterialSpotBtn);
+        addNewDisease = view.findViewById(R.id.addDisease);
 
         bacterialSpotView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,18 @@ public class PlantDiseases extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, bacterialSpotView);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        addNewDisease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AddDiseases addDiseases = new AddDiseases();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, addDiseases);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
