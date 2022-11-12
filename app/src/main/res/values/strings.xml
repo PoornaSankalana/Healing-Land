@@ -78,4 +78,6 @@
     <string name="i_already_have_an_account">I already have an account</string>
     <string name="plantation_events">Plantation Events</string>
     <string name="add_events">Add Events</string>
+    <string name="plant_code">Plant Code</string>
+    <string name="event_id">Event Id</string>
 </resources>
