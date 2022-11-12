@@ -64,6 +64,7 @@ public class AddGardenTips extends AppCompatActivity {
                 }
             }
         });
+
     }
 
 //    public void navigateLogin(View view) {
