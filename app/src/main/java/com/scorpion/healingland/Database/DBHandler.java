@@ -182,4 +182,105 @@ public class DBHandler extends SQLiteOpenHelper {
         return newRow;
     }
 
+    public Cursor getdata(String user) {
+
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+
+
+        Cursor cursor = MyDB.rawQuery("select * from users where username=?", new String[]{user});
+
+        return cursor;
+
+    }
+
+
+    public Boolean EditGardenTips(String plantCode, String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl) {
+        SQLiteDatabase db =getWritableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(Fields.GardenTipsData.COLUMN_2, plantName);
+        values.put(Fields.GardenTipsData.COLUMN_3, botanicalName);
+        values.put(Fields.GardenTipsData.COLUMN_4, plantType);
+        values.put(Fields.GardenTipsData.COLUMN_5, water);
+        values.put(Fields.GardenTipsData.COLUMN_6, plantingTip);
+        values.put(Fields.GardenTipsData.COLUMN_7, fertilizerTip);
+        values.put(Fields.GardenTipsData.COLUMN_8, imageUrl);
+
+        // Which row to update, based on the title
+        String selection = Fields.GardenTipsData.COLUMN_1 + " LIKE ?";
+        String[] selectionArgs = {plantCode};
+
+        int count = db.update(
+                Fields.GardenTipsData.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+
+        if(count >=1){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public void  deleteGardenTips (String plantCode){
+
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Define 'where' part of query.
+        String selection = Fields.GardenTipsData.COLUMN_1 + " LIKE ?";
+        // Specify arguments in placeholder order.
+        String[] selectionArgs = { plantCode };
+        // Issue SQL statement.
+        int deletedRows = db.delete(Fields.GardenTipsData.TABLE_NAME, selection, selectionArgs);
+    }
+
+    public List GetYourTips (){
+
+        String plantCode = "P1001";
+        SQLiteDatabase db = getReadableDatabase();
+
+// Define a projection that specifies which columns from the database
+// you will actually use after this query.
+        String[] projection = {
+                BaseColumns._ID,
+                Fields.GardenTipsData.COLUMN_1,
+                Fields.GardenTipsData.COLUMN_2,
+                Fields.GardenTipsData.COLUMN_3,
+                Fields.GardenTipsData.COLUMN_4,
+                Fields.GardenTipsData.COLUMN_5,
+                Fields.GardenTipsData.COLUMN_6,
+                Fields.GardenTipsData.COLUMN_7,
+                Fields.GardenTipsData.COLUMN_8,
+
+        };
+
+// Filter results WHERE "title" = 'My Title'
+        String selection = Fields.GardenTipsData.COLUMN_1 + " = ?";
+        String[] selectionArgs = { plantCode };
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                Fields.GardenTipsData.COLUMN_1 + " ASC";
+
+        Cursor cursor = db.query(
+                Fields.GardenTipsData.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+        List plantCodes = new ArrayList<>();
+        while(cursor.moveToNext()) {
+            long plantCod = cursor.getLong(cursor.getColumnIndexOrThrow(Fields.GardenTipsData.COLUMN_1));
+            plantCodes.add(plantCod);
+        }
+        cursor.close();
+        return plantCodes;
+    }
 }
