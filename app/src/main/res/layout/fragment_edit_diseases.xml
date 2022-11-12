@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditDiseases">
-
-    <TextView
-        android:id="@+id/editPlantDiseases"
-        android:layout_width="243dp"
-        android:layout_height="99dp"
-        android:fontFamily="@font/poppins_family"
-        android:text="@string/update_plant_disease_details"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+    tools:context=".AddDiseases">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -37,14 +19,42 @@
         app:srcCompat="@drawable/background_decoration" />
 
     <LinearLayout
-        android:layout_width="423dp"
-        android:layout_height="650dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:id="@+id/udError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_family"
+            android:textAlignment="center"
+            android:textColor="@color/error"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/addPlantDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/update_plant_disease_details"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -64,10 +74,11 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/updiseaseName"
+                android:id="@+id/diseaseName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
+                android:text="@string/bacterial_spot"
                 android:hint="@string/disease_name"
                 android:inputType="textPersonName" />
 
@@ -91,12 +102,15 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/updiseaseDescription"
+                android:id="@+id/diseaseDescription"
                 android:layout_width="match_parent"
+                android:lines="8"
+                android:minLines="6"
                 android:layout_height="100dp"
+                android:text="@string/bacterial_spot_can_be_a_devastating_disease_when_the_weather_is_warm_and_humid_the_disease_can_affect_all_above_ground_parts_of_tomato_and"
                 android:fontFamily="@font/poppins_family"
                 android:hint="@string/disease_description"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,11 +132,12 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/updiseaseCause"
+                android:id="@+id/diseaseCause"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_family"
-                android:hint="Disease Cause"
+                android:hint="@string/disease_cause"
+                android:text="@string/four_species_of_xanthomonas"
                 android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -145,66 +160,31 @@
             app:startIconTint="@color/placeholder">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/uphowToPrevent"
+                android:id="@+id/prevention"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:lines="8"
                 android:fontFamily="@font/poppins_family"
+                android:text="@string/use_clean_propagation_material_and_disease_free_seed_in_field_grown_tomato_and_pepper_rotate"
                 android:hint="@string/how_to_prevent_disease"
-                android:inputType="textPersonName" />
+                android:inputType="textMultiLine" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/uDisease"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:padding="4dp"
-            android:textColorHint="@color/placeholder"
-            app:boxCornerRadiusBottomEnd="50dp"
-            app:boxCornerRadiusBottomStart="50dp"
-            app:boxCornerRadiusTopEnd="50dp"
-            app:boxCornerRadiusTopStart="50dp"
-            app:boxStrokeColor="@color/placeholder"
-            app:hintTextColor="@color/placeholder"
-            app:startIconTint="@color/placeholder">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/upuploadPhotos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_family"
-                android:hint="@string/upload_a_photo"
-                android:inputType="textPersonName" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/updatebtn"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/round_button"
-                android:fontFamily="@font/poppins_family"
-                android:text="@string/update"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-
-        </LinearLayout>
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/update"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
