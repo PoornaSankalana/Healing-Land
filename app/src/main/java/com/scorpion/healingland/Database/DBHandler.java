@@ -26,6 +26,7 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_ENTRIES);
         db.execSQL(SQL_CREATE_GARDEN_TIPS);
         db.execSQL(SQL_CREATE_EVENT);
+        db.execSQL(SQL_CREATE_DISEASES);
     }
 
     @Override
@@ -33,6 +34,7 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         db.execSQL(SQL_DELETE_GARDEN_TIPS);
         db.execSQL(SQL_DELETE_EVENT);
+        db.execSQL(SQL_DELETE_DISEASES);
         onCreate(db);
     }
 
@@ -67,6 +69,14 @@ public class DBHandler extends SQLiteOpenHelper {
             Fields.EventData.COLUMN_8 + " TEXT," +
             Fields.EventData.COLUMN_9 + " TEXT)";
 
+    // Diseases table creation
+    private static final String SQL_CREATE_DISEASES = "CREATE TABLE " + Fields.DiseasesData.TABLE_NAME + " (" +
+            Fields.DiseasesData.COLUMN_1 + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            Fields.DiseasesData.COLUMN_2 + " TEXT," +
+            Fields.DiseasesData.COLUMN_3 + " TEXT," +
+            Fields.DiseasesData.COLUMN_4 + " TEXT," +
+            Fields.DiseasesData.COLUMN_5 + " TEXT)";
+
     // Drop user table
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + Fields.UserData.TABLE_NAME;
@@ -78,6 +88,10 @@ public class DBHandler extends SQLiteOpenHelper {
     // Drop Event table
     private static final String SQL_DELETE_EVENT =
             "DROP TABLE IF EXISTS " + Fields.EventData.TABLE_NAME;
+
+    // Drop Diseases table
+    private static final String SQL_DELETE_DISEASES =
+            "DROP TABLE IF EXISTS " + Fields.DiseasesData.TABLE_NAME;
 
     public long RegisterUser (String firstname, String lastname, String email, String phone, String password){
         // Get the database instance in write mode
@@ -178,6 +192,23 @@ public class DBHandler extends SQLiteOpenHelper {
 
         // insert the new row and returning
         long newRow = db.insert(Fields.EventData.TABLE_NAME, null, contentValues);
+
+        return newRow;
+    }
+
+    public long AddDisease (String diseaseName, String diseaseDesc, String cause, String prevention){
+        // Get the database instance in write mode
+        SQLiteDatabase db = getWritableDatabase();
+
+        // Create a new map of values, where column names are the keys
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Fields.DiseasesData.COLUMN_2, diseaseName);
+        contentValues.put(Fields.DiseasesData.COLUMN_3, diseaseDesc);
+        contentValues.put(Fields.DiseasesData.COLUMN_4, cause);
+        contentValues.put(Fields.DiseasesData.COLUMN_5, prevention);
+
+        // insert the new row and returning
+        long newRow = db.insert(Fields.DiseasesData.TABLE_NAME, null, contentValues);
 
         return newRow;
     }

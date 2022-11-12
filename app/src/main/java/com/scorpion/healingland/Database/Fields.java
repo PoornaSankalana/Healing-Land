@@ -44,4 +44,13 @@ public final class Fields {
         public static final String COLUMN_9 = "imgUrl";
 
     }
+
+    public static class DiseasesData implements BaseColumns {
+        public static final String TABLE_NAME = "DiseaseInfo";
+        public static final String COLUMN_1 = "diseaseId";
+        public static final String COLUMN_2 = "diseaseName";
+        public static final String COLUMN_3= "diseaseDescription";
+        public static final String COLUMN_4 = "diseaseCause";
+        public static final String COLUMN_5 = "howToPrevent";
+    }
 }
