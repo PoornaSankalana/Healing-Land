@@ -93,7 +93,6 @@
     <string name="i_already_have_an_account">I already have an account</string>
     <string name="plantation_events">Plantation Events</string>
     <string name="add_events">Add Events</string>
-    <string name="plant_code">plant_code</string>
     <string name="cure_and_prevent_plant_diseases">Cure and Prevent Plant Diseases</string>
     <string name="plant_diseases_home">Plant Diseases Home</string>
     <string name="plant_diseases">Plant Diseases</string>
@@ -117,4 +116,6 @@
     <string name="bacterial_spot_can_be_a_devastating_disease_when_the_weather_is_warm_and_humid_the_disease_can_affect_all_above_ground_parts_of_tomato_and">Bacterial spot can be a devastating disease when the weather is warm and humid. The disease can affect all above-ground parts of tomato and</string>
     <string name="use_clean_propagation_material_and_disease_free_seed_in_field_grown_tomato_and_pepper_rotate">Use clean propagation material and disease-free seed. In field-grown tomato and pepper rotate</string>
     <string name="four_species_of_xanthomonas">four species of Xanthomonas</string>
+    <string name="plant_code">Plant Code</string>
+    <string name="event_id">Event Id</string>
 </resources>
