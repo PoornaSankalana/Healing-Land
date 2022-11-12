@@ -21,16 +21,31 @@
 
     <LinearLayout
         android:id="@+id/loginContainer"
-        android:layout_width="431dp"
-        android:layout_height="550dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.281"
         tools:ignore="MissingConstraints,UselessLeaf,UselessParent">
+
+        <TextView
+            android:id="@+id/headingTextView"
+            android:layout_width="245dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_family"
+            android:text="@string/add_plant_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="58dp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -168,26 +183,12 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="88dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginContainer"
-        app:layout_constraintVertical_bias="0.0">
-
         <Button
-            android:id="@+id/submitbtn"
+            android:id="@+id/plantAdd"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/round_button"
             android:fontFamily="@font/poppins_family"
@@ -196,18 +197,5 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/headingTextView"
-        android:layout_width="245dp"
-        android:layout_height="33dp"
-        android:fontFamily="@font/poppins_family"
-        android:text="@string/add_plant_details"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="58dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
