@@ -139,19 +139,20 @@ public class DBHandler extends SQLiteOpenHelper {
         }
     }
 
-    public long AddGardenTips (String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl){
+    public long AddGardenTips (String plantCode, String plantName, String botanicalName, String plantType, String water, String plantingTip, String fertilizerTip, String imageUrl){
         // Get the database instance in write mode
         SQLiteDatabase db = getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues contentValues = new ContentValues();
-        contentValues.put(Fields.GardenTipsData.COLUMN_1, plantName);
-        contentValues.put(Fields.GardenTipsData.COLUMN_2, botanicalName);
-        contentValues.put(Fields.GardenTipsData.COLUMN_3, plantType);
-        contentValues.put(Fields.GardenTipsData.COLUMN_4, water);
-        contentValues.put(Fields.GardenTipsData.COLUMN_5, plantingTip);
-        contentValues.put(Fields.GardenTipsData.COLUMN_6, fertilizerTip);
-        contentValues.put(Fields.GardenTipsData.COLUMN_7, imageUrl);
+        contentValues.put(Fields.GardenTipsData.COLUMN_1, plantCode);
+        contentValues.put(Fields.GardenTipsData.COLUMN_2, plantName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_3, botanicalName);
+        contentValues.put(Fields.GardenTipsData.COLUMN_4, plantType);
+        contentValues.put(Fields.GardenTipsData.COLUMN_5, water);
+        contentValues.put(Fields.GardenTipsData.COLUMN_6, plantingTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_7, fertilizerTip);
+        contentValues.put(Fields.GardenTipsData.COLUMN_8, imageUrl);
 
         // insert the new row and returning
         long newRow = db.insert(Fields.GardenTipsData.TABLE_NAME, null, contentValues);
@@ -176,7 +177,7 @@ public class DBHandler extends SQLiteOpenHelper {
         contentValues.put(Fields.EventData.COLUMN_9, imgUrl);
 
         // insert the new row and returning
-        long newRow = db.insert(Fields.UserData.TABLE_NAME, null, contentValues);
+        long newRow = db.insert(Fields.EventData.TABLE_NAME, null, contentValues);
 
         return newRow;
     }

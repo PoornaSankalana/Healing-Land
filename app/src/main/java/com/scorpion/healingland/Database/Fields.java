@@ -33,14 +33,15 @@ public final class Fields {
 
     public static class EventData implements BaseColumns{
         public static final String TABLE_NAME = "EventInfo";
-        public static final String COLUMN_1 = "EventID";
-        public static final String COLUMN_2 = "EventName";
-        public static final String COLUMN_3= "EventDescription";
-        public static final String COLUMN_4 = "Date";
-        public static final String COLUMN_5 = "Time";
-        public static final String COLUMN_6 = "Venue";
-        public static final String COLUMN_7 = "CoordinatorName";
-        public static final String COLUMN_8 = "CoordinatorNumber";
-        public static final String COLUMN_9 = "ImageUrl";
+        public static final String COLUMN_1 = "eventId";
+        public static final String COLUMN_2 = "eventName";
+        public static final String COLUMN_3= "eventDescription";
+        public static final String COLUMN_4 = "date";
+        public static final String COLUMN_5 = "time";
+        public static final String COLUMN_6 = "venue";
+        public static final String COLUMN_7 = "cname";
+        public static final String COLUMN_8 = "cNumber";
+        public static final String COLUMN_9 = "imgUrl";
+
     }
 }

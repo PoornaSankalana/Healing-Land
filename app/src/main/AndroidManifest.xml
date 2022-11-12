@@ -14,6 +14,17 @@
         android:theme="@style/Theme.HealingLand"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentDetailsAdd"
+            android:exported="true" />
+        <activity
+            android:name=".SelectPlantType"
+            android:exported="true" />
+        <activity
+            android:name=".PlantUpdate"
+            android:exported="true" />
+        <activity
+            android:name=".PlantAdd"
+            android:exported="true" />
             android:name=".Events"
             android:exported="false" />
         <activity
@@ -79,7 +90,7 @@
             android:exported="true" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -141,7 +152,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="true" />
     </application>
 
 </manifest>
